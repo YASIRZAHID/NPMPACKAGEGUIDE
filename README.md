@@ -3,10 +3,10 @@
 this guide is for making a calculator package and relevant packages are installed 
 this is a step by step guide for setting the right environment for the project 
 
-##1 check if right environment is installed
+## 1 check if right environment is installed
 
     open command prompt type 
-    ###1a
+    ### a
     ```
         node -v
     ```    
@@ -14,19 +14,19 @@ this is a step by step guide for setting the right environment for the project
 
             v18.13.0     (your version might be diffrent)
 
-    ##b
+    ### b
         tsc -v
 
         command prompt should return the version you have intalled e.g
 
             Version 4.8.4     (your version might be diffrent)
 
-    ##c
+    ### c
         make sure that you have visual studio installed       
 
     (if any of above is not installed install it installation guide at end of document appendix d)    
 
-##2 making a directory for our project
+## 2 making a directory for our project
 
     now if you know how to make a new directory using command prompt do it(more detail at end of document appendix a)
                                     or
@@ -34,11 +34,11 @@ this is a step by step guide for setting the right environment for the project
     click in address bar 
     type cmd and press enter
 
-##3 setting up typescript configuration file
+## 3 setting up typescript configuration file
 
     in command prompt type
     
-    ##a
+    ## a
         tsc --init             (and press enter)
 
         this should create a tsconfig.json file in your directory
@@ -47,25 +47,25 @@ this is a step by step guide for setting the right environment for the project
            
             change following values from whatever they are to following
 
-        ##a1
+        ### a1
                 "target" to "ES2022" (or latest available) 
                 
                 it should look like this now
                     "target": "ES2022", 
 
-        ##a2
+        ### a2
                 "module" to "NodeNext", 
 
                 it should look like this now
                 "module": "NodeNext", 
 
-        #a3        
+        ### a3        
                 "moduleResolution" to "NodeNext",
 
                 it should look like this now
                 "moduleResolution": "NodeNext",
 
-        ##a4        
+        ### a4        
                 "outDir" to "./bin",
 
                 it should look like this now
@@ -73,7 +73,7 @@ this is a step by step guide for setting the right environment for the project
         (do not forget to save when you are done making changes (ctrl + s))  
         
 
-    ##b 
+    ## b 
         npm init -y
 
         this should create a package.json file in your directory
@@ -82,7 +82,7 @@ this is a step by step guide for setting the right environment for the project
 
         make following changes in this file
 
-        ##b1    
+        ### b1    
 
             in line 6 below "main": "index.js", enter 
                 "type": "module", (in package.json file created in current directory)
@@ -90,7 +90,7 @@ this is a step by step guide for setting the right environment for the project
             this should look like this now
                 "main": "index.js",
                 "type": "module", 
-        ##b2    
+        ### b2    
 
             in line 7 below "type": "module", enter 
                 "bin": {
@@ -104,21 +104,21 @@ this is a step by step guide for setting the right environment for the project
                 },
                    
 
- ##4 installing required NPM packages
+ ## 4 installing required NPM packages
 
     in command prompt type(each step is installing a package)
 
-    ##a
+    ### a
         npm i inquirer
 
         this will install inquirer.js
 
-    ##b 
+    ### b 
         npm i chalk
 
         this will install chalk.js
 
-    ##c 
+    ### c 
         npm i chalk-animation
 
         this will install chalk-animator.js
@@ -129,28 +129,28 @@ this is a step by step guide for setting the right environment for the project
 
     in command prompt type
 
-    ##a
+    ### a
 
         npm i @types/node -D
 
         this will add a folder node_modules (folder) and package-lock.json file to your current directory
 
-    ##b
+    ### b
 
         npm i @types/chalk -D
 
-    ##c
+    ### c
 
         npm i @types/chalk-animation -D
 
-    ##d
+    ### d
 
         npm i @types/node -D   
     
     (each of these step will add respective package to node_modules @types folder as well as devdependencies in
     package.json file )
 
-##6 create a file named .gitignore in main directory
+## 6 create a file named .gitignore in main directory
 
     in this file type
 
@@ -158,7 +158,7 @@ this is a step by step guide for setting the right environment for the project
 
     this will prevent uploading node_modules when pushing to github
 
-##7  create an index.ts file in main directory
+## 7  create an index.ts file in main directory
 
     (just to test)
 
@@ -173,37 +173,37 @@ this is a step by step guide for setting the right environment for the project
 
     this should create a index.js file.
 
-##8  write your code for whatever you are creating using typescript simply
+## 8  write your code for whatever you are creating using typescript simply
 
     line one of your document must iclude following code (shebang #!)
 
         #! /usr/bin/env node
 
-##9  compile/transpile your files in this case in terminal just type 
+## 9  compile/transpile your files in this case in terminal just type 
         
         tsc
 
-##10 publishing to npm
+## 10 publishing to npm
 
-   ##a create an npm account here
+   ### a create an npm account here
 
         "https://www.npmjs.com/signup"
 
-    ##b in terminal/command prompt opened in current directory type
+    ### b in terminal/command prompt opened in current directory type
 
         npm login
 
         this will ask for your details or redirect you to the browser  for login
 
-    ##c in terminal enter following command
+    ### c in terminal enter following command
 
         npm publish 
 
         this will publish your package
 
-    ##d running your package 
+    ### d running your package 
 
-        ##d1 make a new directory/folder 
+        #### d1 make a new directory/folder 
             
             open command prompt(in this directory)
 
@@ -215,7 +215,7 @@ this is a step by step guide for setting the right environment for the project
 
             this step will install your package
 
-        ##d2 run the package
+        #### d2 run the package
 
             in command prompt enter following command
 
