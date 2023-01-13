@@ -6,7 +6,7 @@ this is a step by step guide for setting the right environment for the project
 ## 1 check if right environment is installed ##
 
     open command prompt type 
-   ### a
+   ### 1a) Step 1/3
     
         node -v
         
@@ -14,14 +14,14 @@ this is a step by step guide for setting the right environment for the project
 
             v18.13.0     (your version might be diffrent)
 
-   ### b
+   ### 1b) Step 2/3
         tsc -v
 
         command prompt should return the version you have intalled e.g
 
             Version 4.8.4     (your version might be diffrent)
 
-   ### c
+   ### 1c) Step 3/3
         make sure that you have visual studio installed       
 
     (if any of above is not installed install it installation guide at end of document appendix d)    
@@ -38,7 +38,7 @@ this is a step by step guide for setting the right environment for the project
 
     in command prompt type
     
-   ### a
+   ### 3a Create and edit tsconfig.json file
         tsc --init             (and press enter)
 
         this should create a tsconfig.json file in your directory
@@ -47,25 +47,25 @@ this is a step by step guide for setting the right environment for the project
            
             change following values from whatever they are to following
 
-   #### a1
+   #### 3a) i) Set target to latest ecmascript
                 "target" to "ES2022" (or latest available) 
                 
                 it should look like this now
                     "target": "ES2022", 
 
-   #### a2
+   #### 3a) ii) set module to Nodenext
                 "module" to "NodeNext", 
 
                 it should look like this now
                 "module": "NodeNext", 
 
-   #### a3        
+   #### 3a) iii) set resolution to Nodenext        
                 "moduleResolution" to "NodeNext",
 
                 it should look like this now
                 "moduleResolution": "NodeNext",
 
-   #### a4        
+   #### 3a) iv) set outDir to Nodenext
                 "outDir" to "./bin",
 
                 it should look like this now
@@ -73,7 +73,7 @@ this is a step by step guide for setting the right environment for the project
         (do not forget to save when you are done making changes (ctrl + s))  
         
 
-   ### b 
+   ### 3b Create aand edit package.json file
         npm init -y
 
         this should create a package.json file in your directory
@@ -82,7 +82,7 @@ this is a step by step guide for setting the right environment for the project
 
         make following changes in this file
 
-   #### b1    
+   #### 3b) i) Setting type to module    
 
             in line 6 below "main": "index.js", enter 
                 "type": "module", (in package.json file created in current directory)
@@ -90,7 +90,7 @@ this is a step by step guide for setting the right environment for the project
             this should look like this now
                 "main": "index.js",
                 "type": "module", 
-   #### b2    
+   #### 3b) ii) Setting bin directory    
 
             in line 7 below "type": "module", enter 
                 "bin": {
@@ -108,44 +108,44 @@ this is a step by step guide for setting the right environment for the project
 
     in command prompt type(each step is installing a package)
 
-   ### a
+   ### install inquirer
         npm i inquirer
 
         this will install inquirer.js
 
-   ### b 
+   ### install chalk
         npm i chalk
 
-        this will install chalk.js
+        this will install chalk.js (used for beautifull text layout on cli)
 
-   ### c 
+   ### install chalk-animation
         npm i chalk-animation
 
         this will install chalk-animator.js
 
     (each step will install package and also add relevant package to package.json file in dependencies) 
 
-## 5 adding installed package in node_modules types 
+## 5 adding installed package in node_modules types and devdependencies 
 
     in command prompt type
 
-   ### a
+   ### adding node
 
         npm i @types/node -D
 
         this will add a folder node_modules (folder) and package-lock.json file to your current directory
 
-   ### b
+   ### adding chalk
 
         npm i @types/chalk -D
 
-   ### c
+   ### adding chalk-animation
 
         npm i @types/chalk-animation -D
 
-   ### d
+   ### adding inquirer
 
-        npm i @types/node -D   
+        npm i @types/inquirer -D   
     
     (each of these step will add respective package to node_modules @types folder as well as devdependencies in
     package.json file )
@@ -201,9 +201,9 @@ this is a step by step guide for setting the right environment for the project
 
         this will publish your package
 
-   ### d running your package 
+   ### d) running your package 
 
-   #### d1 make a new directory/folder 
+   #### make a new directory/folder 
             
             open command prompt(in this directory)
 
@@ -215,7 +215,7 @@ this is a step by step guide for setting the right environment for the project
 
             this step will install your package
 
-   #### d2 run the package
+   #### run the package
 
             in command prompt enter following command
 
