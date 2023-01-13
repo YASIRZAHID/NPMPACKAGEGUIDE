@@ -6,7 +6,7 @@ this is a step by step guide for setting the right environment for the project
 ##1 check if right environment is installed
 
     open command prompt type 
-    ##a
+    ##1a
     ```
         node -v
     ```    
