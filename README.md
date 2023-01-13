@@ -3,10 +3,10 @@
 this guide is for making a calculator package and relevant packages are installed 
 this is a step by step guide for setting the right environment for the project 
 
-## 1 check if right environment is installed ##
+## 1 Check if right environment is installed ##
 
     open command prompt type 
-   ### 1a) Step 1/3
+   ### Check if node is installed
     
         node -v
         
@@ -14,19 +14,19 @@ this is a step by step guide for setting the right environment for the project
 
             v18.13.0     (your version might be diffrent)
 
-   ### 1b) Step 2/3
+   ### Check if type script is installed
         tsc -v
 
         command prompt should return the version you have intalled e.g
 
             Version 4.8.4     (your version might be diffrent)
 
-   ### 1c) Step 3/3
+   ### Make sure visual studio is installed
         make sure that you have visual studio installed       
 
     (if any of above is not installed install it installation guide at end of document appendix d)    
 
-## 2 making a directory for our project
+## 2 Making a directory for our project
 
     now if you know how to make a new directory using command prompt do it(more detail at end of document appendix a)
                                     or
@@ -34,11 +34,11 @@ this is a step by step guide for setting the right environment for the project
     click in address bar 
     type cmd and press enter
 
-## 3 setting up typescript configuration file
+## 3 Setting up typescript configuration file
 
     in command prompt type
     
-   ### 3a Create and edit tsconfig.json file
+   ### Create and edit tsconfig.json file
         tsc --init             (and press enter)
 
         this should create a tsconfig.json file in your directory
@@ -47,25 +47,25 @@ this is a step by step guide for setting the right environment for the project
            
             change following values from whatever they are to following
 
-   #### 3a) i) Set target to latest ecmascript
+   #### Set target to latest ecmascript
                 "target" to "ES2022" (or latest available) 
                 
                 it should look like this now
                     "target": "ES2022", 
 
-   #### 3a) ii) set module to Nodenext
+   #### Set module to Nodenext
                 "module" to "NodeNext", 
 
                 it should look like this now
                 "module": "NodeNext", 
 
-   #### 3a) iii) set resolution to Nodenext        
+   #### Set resolution to Nodenext        
                 "moduleResolution" to "NodeNext",
 
                 it should look like this now
                 "moduleResolution": "NodeNext",
 
-   #### 3a) iv) set outDir to Nodenext
+   #### Set outDir to Nodenext
                 "outDir" to "./bin",
 
                 it should look like this now
@@ -73,7 +73,7 @@ this is a step by step guide for setting the right environment for the project
         (do not forget to save when you are done making changes (ctrl + s))  
         
 
-   ### 3b Create aand edit package.json file
+   ### Create aand edit package.json file
         npm init -y
 
         this should create a package.json file in your directory
@@ -82,7 +82,7 @@ this is a step by step guide for setting the right environment for the project
 
         make following changes in this file
 
-   #### 3b) i) Setting type to module    
+   #### Setting type to module    
 
             in line 6 below "main": "index.js", enter 
                 "type": "module", (in package.json file created in current directory)
@@ -90,7 +90,7 @@ this is a step by step guide for setting the right environment for the project
             this should look like this now
                 "main": "index.js",
                 "type": "module", 
-   #### 3b) ii) Setting bin directory    
+   #### Setting bin directory    
 
             in line 7 below "type": "module", enter 
                 "bin": {
@@ -104,38 +104,38 @@ this is a step by step guide for setting the right environment for the project
                 },
                    
 
- ## 4 installing required NPM packages
+ ## 4 Installing required NPM packages
 
     in command prompt type(each step is installing a package)
 
-   ### install inquirer
+   ### Install inquirer
         npm i inquirer
 
         this will install inquirer.js
 
-   ### install chalk
+   ### Install chalk
         npm i chalk
 
         this will install chalk.js (used for beautifull text layout on cli)
 
-   ### install chalk-animation
+   ### Install chalk-animation
         npm i chalk-animation
 
         this will install chalk-animator.js
 
     (each step will install package and also add relevant package to package.json file in dependencies) 
 
-## 5 adding installed package in node_modules types and devdependencies 
+## 5 Adding installed package in node_modules types and devdependencies 
 
     in command prompt type
 
-   ### adding node
+   ### Adding node
 
         npm i @types/node -D
 
         this will add a folder node_modules (folder) and package-lock.json file to your current directory
 
-   ### adding chalk
+   ### Adding chalk
 
         npm i @types/chalk -D
 
@@ -143,14 +143,14 @@ this is a step by step guide for setting the right environment for the project
 
         npm i @types/chalk-animation -D
 
-   ### adding inquirer
+   ### Adding inquirer ###
 
         npm i @types/inquirer -D   
     
     (each of these step will add respective package to node_modules @types folder as well as devdependencies in
     package.json file )
 
-## 6 create a file named .gitignore in main directory
+## 6 Create a file named .gitignore in main directory
 
     in this file type
 
@@ -158,7 +158,7 @@ this is a step by step guide for setting the right environment for the project
 
     this will prevent uploading node_modules when pushing to github
 
-## 7  create an index.ts file in main directory
+## 7  Create an index.ts file in main directory
 
     (just to test)
 
@@ -173,37 +173,41 @@ this is a step by step guide for setting the right environment for the project
 
     this should create a index.js file.
 
-## 8  write your code for whatever you are creating using typescript simply
+## 8  Write your code for whatever you are creating using typescript simply
 
     line one of your document must iclude following code (shebang #!)
 
         #! /usr/bin/env node
 
-## 9  compile/transpile your files in this case in terminal just type 
+## 9  Compile/transpile your files in this case in terminal just type 
         
         tsc
 
-## 10 publishing to npm
+## 10 Publishing to npm
 
-   ### a) create an npm account here
+   ### Create an npm account here
 
         "https://www.npmjs.com/signup"
 
-   ### b) in terminal/command prompt opened in current directory type
+   ### Login to NPM
+   
+        In terminal/command prompt opened in current directory type
 
         npm login
 
         this will ask for your details or redirect you to the browser  for login
 
-   ### c) in terminal enter following command
+   ### Publishing package to NPM account
+   
+        in terminal enter following command
 
         npm publish 
 
         this will publish your package
 
-   ### d) running your package 
+   ### Running your package 
 
-   #### make a new directory/folder 
+   #### Make a new directory/folder 
             
             open command prompt(in this directory)
 
@@ -215,7 +219,7 @@ this is a step by step guide for setting the right environment for the project
 
             this step will install your package
 
-   #### run the package
+   #### Run the package
 
             in command prompt enter following command
 
@@ -224,7 +228,7 @@ this is a step by step guide for setting the right environment for the project
             this will run your package    
 
 
-## appendix a
+## Appendix a
 
     (press tab to get available paths (when applicable))
     cd      to change directory
@@ -232,17 +236,17 @@ this is a step by step guide for setting the right environment for the project
     ..      to move one level up in directory
     ./      directory starting in current folder
 
-## appendix b 
+## Appendix b 
 
     after uncommenting any attribute place cursor in value of any attribute
 
     press ctrl + SPACEBAR to see list of valid values
 
-## appendix c
+## Appendix c
 
     npm search (CAN BE USED TO CHACK IF THE NAME YOU ARE USING IS AVAILABLE)
 
-## appendix d 
+## Appendix d 
 
     GUIDE TO INSTALL VISUAL STUDIO CODE
 
