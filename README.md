@@ -1,7 +1,7 @@
 # GUIDE TO CREATING NPM PACKAGE #
 
 This guide is for making a calculator package and relevant packages are installed, 
-this is a step by step guide for setting the right environment for the project 
+This is a step by step guide for setting the right environment for the project 
 
 ## 1 Check if right environment is installed ##
 
@@ -10,14 +10,14 @@ Open command prompt and type
     
         node -v
         
-command prompt should return the version you have intalled e.g
+Command prompt should return the version you have intalled e.g
 
             v18.13.0     (your version might be diffrent)
 
-   ### Check if type script is installed
+   ### Check if typescript is installed
         tsc -v
 
-command prompt should return the version you have intalled e.g
+Command prompt should return the version you have intalled e.g
 
          Version 4.8.4     (your version might be diffrent)
 
@@ -28,11 +28,11 @@ Make sure that you have visual studio installed
 
 ## 2 Making a directory for our project
 
-now if you know how to make a new directory using command prompt do it(more detail at end of document appendix a)
+Now if you know how to make a new directory using command prompt do it(more detail at end of document appendix a)
 or
-create a new folder and open it 
-click in address bar 
-type cmd and press enter
+Create a new folder and open it 
+Click in address bar 
+Type cmd and press enter
 
 ## 3 Setting up typescript configuration file
 
@@ -41,33 +41,33 @@ In command prompt type
    ### Create and edit tsconfig.json file
         tsc --init             (and press enter)
 
-this should create a tsconfig.json file in your directory
+This should create a tsconfig.json file in your directory
 
-make following changes in this file (more about selecting right values in end of document appendix b)
+Take following changes in this file (more about selecting right values in end of document appendix b)
            
-change following values from whatever they are to following
+Change following values from whatever they are to following
 
    #### Set target to latest ecmascript
                 "target" to "ES2022" (or latest available) 
-it should look like this now
+It should look like this now
 
                 "target": "ES2022", 
 
    #### Set module to Nodenext
                 "module" to "NodeNext", 
-it should look like this now
+It should look like this now
 
                 "module": "NodeNext", 
 
    #### Set resolution to Nodenext        
                 "moduleResolution" to "NodeNext",
-it should look like this now
+It should look like this now
 
                 "moduleResolution": "NodeNext",
 
    #### Set outDir to Nodenext
                 "outDir" to "./bin",
-it should look like this now
+It should look like this now
 
                 "outDir": "./bin",
                 
@@ -77,29 +77,29 @@ it should look like this now
    ### Create and edit package.json file
         npm init -y
 
-this should create a package.json file in your directory
+This should create a package.json file in your directory
 ALERT!! make sure the "name" in this directory is unique (appendix c at end of document) 
-make following changes in this file
+Make following changes in this file
 
    #### Setting type to module    
-in line 6 below "main": "index.js", enter 
+In line 6 below "main": "index.js", enter 
 
                 "type": "module", (in package.json file created in current directory)
                 
-this should look like this now
+This should look like this now
 
                 "main": "index.js",
                 "type": "module", 
                 
    #### Setting bin directory    
 
-in line 7 below "type": "module", enter 
+In line 7 below "type": "module", enter 
 
                 "bin": {
                         "yasir_project00_calculator": "bin/index.js"
                  },
 
-this should look like this now (line 6 and 7)
+This should look like this now (line 6 and 7)
 
                 "type": "module",
                 "bin": {
@@ -109,33 +109,33 @@ this should look like this now (line 6 and 7)
 
  ## 4 Installing required NPM packages
 
-in command prompt type(each step is installing a package)
+In command prompt type(each step is installing a package)
 
    ### Install inquirer
         npm i inquirer
 
-this will install inquirer.js
+This will install inquirer.js
 
    ### Install chalk
         npm i chalk
 
-this will install chalk.js (used for beautifull text layout on cli)
+This will install chalk.js (used for beautifull text layout on cli)
 
    ### Install chalk-animation
         npm i chalk-animation
 
-this will install chalk-animator.js
+This will install chalk-animator.js
 (each step will install package and also add relevant package to package.json file in dependencies) 
 
 ## 5 Adding installed package in node_modules types and devdependencies 
 
-in command prompt type
+In command prompt type
 
    ### Adding node
 
         npm i @types/node -D
 
-this will add a folder node_modules (folder) and package-lock.json file to your current directory
+This will add a folder node_modules (folder) and package-lock.json file to your current directory
 
    ### Adding chalk
 
@@ -153,29 +153,29 @@ this will add a folder node_modules (folder) and package-lock.json file to your 
 
 ## 6 Create a file named .gitignore in main directory
 
-in this file type
+In this file type
 
     node_modules 
 
-this will prevent uploading node_modules when pushing to github
+This will prevent uploading node_modules when pushing to github
 
 ## 7  Create an index.ts file in main directory
 
 (just to test)
- type following code in this file
+Type following code in this file
 
     console.log("hi")
 
 
-enter following command in terminal or command prompt
+Enter following command in terminal or command prompt
 
     tsc
 
-this should create a index.js file.
+This should create a index.js file.
 
 ## 8  Write your code for whatever you are creating using typescript simply
 
-line one of your document must iclude following code (shebang #!)
+Line one of your document must iclude following code (shebang #!)
 
         #! /usr/bin/env node
 
@@ -195,40 +195,40 @@ In terminal/command prompt opened in current directory type
 
         npm login
 
-this will ask for your details or redirect you to the browser  for login
+This will ask for your details or redirect you to the browser  for login
 
    ### Publishing package to NPM account
    
-in terminal enter following command
+In terminal enter following command
 
         npm publish 
 
-this will publish your package
+This will publish your package
 
    ### Running your package 
 
    #### Make a new directory/folder 
             
-open command prompt(in this directory)
-type following command 
+Open command prompt(in this directory)
+Type following command 
 
             npm i your_package_name   
             
 (this is name you have set in package .json directory)
-this step will install your package
+This step will install your package
 
    #### Run the package
 
-in command prompt enter following command
+In command prompt enter following command
 
             npx your_package_name
 
-this will run your package    
+This will run your package    
 
 
 ## Appendix a
 
-    (press tab to get available paths (when applicable))
+(press tab to get available paths (when applicable))
     cd      to change directory
     mkdir   to make directory
     ..      to move one level up in directory
@@ -236,31 +236,33 @@ this will run your package
 
 ## Appendix b 
 
-    after uncommenting any attribute place cursor in value of any attribute
+After uncommenting any attribute place cursor in value of any attribute
 
     press ctrl + SPACEBAR to see list of valid values
 
 ## Appendix c
 
-    npm search (CAN BE USED TO CHACK IF THE NAME YOU ARE USING IS AVAILABLE)
+    npm search 
+(CAN BE USED TO CHACK IF THE NAME YOU ARE USING IS AVAILABLE)
 
 ## Appendix d 
 
-    GUIDE TO INSTALL VISUAL STUDIO CODE
+GUIDE TO INSTALL VISUAL STUDIO CODE
 
-    "https://code.visualstudio.com/docs/setup/windows"
-
-
+"https://code.visualstudio.com/docs/setup/windows"
 
 
-other usefull commands
+Other usefull commands
 
-npm i (CAN USE THIS COMMAND TO INSTALL dependencies LOCALLY PRESENT IN package.json)
+   npm i 
 
+(CAN USE THIS COMMAND TO INSTALL dependencies LOCALLY PRESENT IN package.json)
+
+# My Project
 Here,s the command to install the project I published using the above procedure
 
       npm i yasir_project00_calculator
 
-then run the package using this command
+Then run the package using this command
 
       npx yasir_project00_calculator
