@@ -256,3 +256,11 @@ this will run your package
 other usefull commands
 
 npm i (CAN USE THIS COMMAND TO INSTALL dependencies LOCALLY PRESENT IN package.json)
+
+Here,s the command to install the project I published using the above procedure
+
+      npm i yasir_project00_calculator
+
+then run the package using this command
+
+      npx yasir_project00_calculator
