@@ -50,16 +50,19 @@ change following values from whatever they are to following
    #### Set target to latest ecmascript
                 "target" to "ES2022" (or latest available) 
 it should look like this now
-                    "target": "ES2022", 
+
+                "target": "ES2022", 
 
    #### Set module to Nodenext
                 "module" to "NodeNext", 
 it should look like this now
+
                 "module": "NodeNext", 
 
    #### Set resolution to Nodenext        
                 "moduleResolution" to "NodeNext",
 it should look like this now
+
                 "moduleResolution": "NodeNext",
 
    #### Set outDir to Nodenext
