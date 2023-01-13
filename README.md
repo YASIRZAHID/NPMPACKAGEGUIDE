@@ -1,4 +1,4 @@
-## GUIDE TO CREATING NPM PACKAGE 
+# GUIDE TO CREATING NPM PACKAGE 
 
 this guide is for making a calculator package and relevant packages are installed 
 this is a step by step guide for setting the right environment for the project 
@@ -6,7 +6,7 @@ this is a step by step guide for setting the right environment for the project
 ##1 check if right environment is installed
 
     open command prompt type 
-    ##1a
+    ###1a
     ```
         node -v
     ```    
