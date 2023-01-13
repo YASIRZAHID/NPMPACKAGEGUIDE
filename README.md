@@ -68,8 +68,10 @@ it should look like this now
    #### Set outDir to Nodenext
                 "outDir" to "./bin",
 it should look like this now
+
                 "outDir": "./bin",
-        (do not forget to save when you are done making changes (ctrl + s))  
+                
+(do not forget to save when you are done making changes (ctrl + s))  
         
 
    ### Create aand edit package.json file
@@ -81,18 +83,24 @@ make following changes in this file
 
    #### Setting type to module    
 in line 6 below "main": "index.js", enter 
+
                 "type": "module", (in package.json file created in current directory)
+                
 this should look like this now
+
                 "main": "index.js",
                 "type": "module", 
+                
    #### Setting bin directory    
 
 in line 7 below "type": "module", enter 
+
                 "bin": {
                         "yasir_project00_calculator": "bin/index.js"
                  },
 
 this should look like this now (line 6 and 7)
+
                 "type": "module",
                 "bin": {
                     "yasir_project00_calculator": "bin/index.js"
