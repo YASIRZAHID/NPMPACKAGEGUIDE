@@ -141,7 +141,7 @@ this will add a folder node_modules (folder) and package-lock.json file to your 
 
         npm i @types/chalk -D
 
-   ### adding chalk-animation
+   ### Adding chalk-animation
 
         npm i @types/chalk-animation -D
 
