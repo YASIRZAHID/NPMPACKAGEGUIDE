@@ -7,8 +7,9 @@ this is a step by step guide for setting the right environment for the project
 
     open command prompt type 
     ##a
+    ```
         node -v
-
+    ```    
         command prompt should return the version you have intalled e.g
 
             v18.13.0     (your version might be diffrent)
