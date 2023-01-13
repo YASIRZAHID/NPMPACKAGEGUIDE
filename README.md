@@ -74,7 +74,7 @@ it should look like this now
 (do not forget to save when you are done making changes (ctrl + s))  
         
 
-   ### Create aand edit package.json file
+   ### Create and edit package.json file
         npm init -y
 
 this should create a package.json file in your directory
