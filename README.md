@@ -76,6 +76,7 @@ It should look like this now
 
    ### Create and edit package.json file
         npm init -y
+(type in command prompt)        
 
 This should create a package.json file in your directory
 ALERT!! make sure the "name" in this directory is unique (appendix c at end of document) 
@@ -243,7 +244,7 @@ After uncommenting any attribute place cursor in value of any attribute
 ## Appendix c
 
     npm search 
-(CAN BE USED TO CHACK IF THE NAME YOU ARE USING IS AVAILABLE)
+(CAN BE USED TO CHECK IF THE NAME YOU ARE USING IS AVAILABLE)
 
 ## Appendix d 
 
