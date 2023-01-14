@@ -107,7 +107,7 @@ This should look like this now (line 6 and 7)
                     "yasir_project00_calculator": "bin/index.js"
                 },
                    
-
+Don,t forget to save (ctrl + s)
  ## 4 Installing required NPM packages
 
 In command prompt type(each step is installing a package)
