@@ -134,21 +134,21 @@ In command prompt type
 
    ### Adding node
 
-        npm i @types/node -D
+        npm i -D @types/node 
 
 This will add a folder node_modules (folder) and package-lock.json file to your current directory
 
    ### Adding chalk
 
-        npm i @types/chalk -D
+        npm i -D @types/chalk 
 
    ### Adding chalk-animation
 
-        npm i @types/chalk-animation -D
+        npm i -D @types/chalk-animation 
 
    ### Adding inquirer ###
 
-        npm i @types/inquirer -D   
+        npm i -D @types/inquirer  
     
 (each of these step will add respective package to node_modules @types folder as well as devdependencies in package.json file )
 
